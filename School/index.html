@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>河南牧业经济学院天地图</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <script src="../node_modules/cesium/Build/Cesium/Cesium.js"></script>
+  <script src="./js/flexible.js"></script><!--flex布局-->
+  <link rel="stylesheet" href="./css/style.css"><!--页面样式-->
+  <link href="../node_modules/cesium/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <style>
+    html,
+    body,
+    #cesiumContainer {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cesiumContainer">
+    <div class="header">
+      <h1>CesiumDemo</h1>
+      <div class="picture1"></div>
+      <div class="showTime">当前时间</div>
+    </div>
+    <div class="mainBox">
+      <div class="left">
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </div>
+    </div>
+    <div id="information">
+      <div id="box">
+        <p class="Msg">名称 : </p>
+        <p id="name">111</p>
+      </div>
+      </br>
+      <div id="footer">
+        <p class="Msg">学校信息 : </p>
+        <div id="massageBox">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/schoolFunction.js"></script>
+  <script src="./js/school.js"></script>
+  <script>
+    //设置时间项目
+    var t = null;
+    t = setTimeout(time, 1000);
+    function time() {
+      clearTimeout(t);
+      dt = new Date();
+      var y = dt.getFullYear();
+      var mt = dt.getMonth();
+      var day = dt.getDate();
+      var h = dt.getHours();
+      var m = dt.getMinutes();
+      var s = dt.getSeconds();
+      document.querySelector(".showTime").innerHTML = '当前时间' + y + '年' + mt + '月' + day + '日' + h + '时' + m + '分' + s + '秒'
+      t = setTimeout(time, 1000)
+    }
+  </script>
+</body>
+
+</html>

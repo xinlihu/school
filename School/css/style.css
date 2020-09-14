@@ -1,0 +1,172 @@
+/*引入字体*/
+@font-face {
+  font-family: electronicFont;
+  src: url(../../font/DS-DIGIT.TTF);
+}
+
+#cesiumContainer {
+  position: relative;
+}
+
+/*顶部显示信息及时间*/
+.header {
+  position: relative;
+  height: 50px;
+  background: rgb(0, 0, 0);
+  color: aliceblue;
+  font-size: 15px;
+}
+
+.header h1 {
+  margin: 0 30px;
+  font-size: 15px;
+  line-height: 50px;
+}
+
+.header .showTime {
+  position: absolute;
+  top: 13px;
+  right: 30px;
+  font-family: electronicFont;
+}
+
+/*弹出框*/
+#information {
+  position: absolute;
+  margin-top: 40px;
+  right: 20px;
+  width: 200px;
+  background: rgba(48, 48, 48, 0.6);
+  color: aliceblue;
+  z-index: 2;
+  display: none;
+}
+
+/*弹出框上部分*/
+#box {
+  position: relative;
+  padding: 10px;
+}
+
+/*上半部分边界线*/
+#box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  content: "";
+}
+
+#box::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  content: "";
+}
+
+p {
+  display: inline;
+  margin: 0;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+/*下半部分边界线*/
+#footer {
+  position: relative;
+  padding: 10px;
+}
+
+#footer::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  content: "";
+}
+
+#footer::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  content: "";
+}
+
+/*修改滚动条效果*/
+#massageBox {
+  height: 88px;
+  margin: 5px 10px 5px 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#massageBox::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+}
+
+#massageBox::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.4);
+}
+
+#massageBox::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 0;
+  background: rgba(0,0,0,0.1);
+}
+
+/*美化部分*/
+/*头部图片*/
+.picture1 {
+  position: absolute;
+  top: 8px;
+  left: 140px;
+  width: 30px;
+  height: 30px;
+  background:url(../../img/map.png);
+  background-size: 100% 100%;
+}
+
+.mainBox .left .box1 {
+  position: absolute;
+  top: 1.25rem;
+  left: 20px;
+  width: 3.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(25, 186, 139, 0.5);
+  background: url(../../img/line\(1\).png) rgba(255, 255, 255, 0.1);
+  background-szie: 100% 100%;
+  z-index:  999;
+}
+
+.mainBox .left .box2 {
+  position: absolute;
+  top: 5rem;
+  left: 20px;
+  width: 3.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(25, 186, 139, 0.5);
+  background: url(../../img/line\(1\).png) rgba(255, 255, 255, 0.1);
+  background-szie: 100% 100%;
+  z-index: 999; 
+}
+
+
